@@ -11,6 +11,6 @@ Popüler bir hypercasual oyun olan Jelly Shift'in klonudur. Mobil input sistemi 
 #### Gameplay
 
 <p align="center">
-<img align="center" src="https://media.giphy.com/media/L3QDIKtuiEudogihSn/giphy.gif" width="35%" alt="API Giphy logo"/>
+<img align="center" src="https://media.giphy.com/media/K7LcleRKr4z9s6Fozd/giphy.gif" width="35%" alt="API Giphy logo"/>
 </p>
 
