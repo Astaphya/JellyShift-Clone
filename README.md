@@ -1,7 +1,7 @@
 ## JellyShift-Clone
 
 Popüler bir hypercasual oyun olan Jelly Shift'in klonudur. Mobil input sistemi ile parmağınızı yukarı ve aşağı doğru kaydırarak , kübü engellerin içerisine sığdırmaya çalıştığınız bir mobil oyundur.
-#### Kullanmış olduğum teknikler ve araçlar
+#### Kullanılan teknikler ve araçlar
 
 - Basit engelleri oluşturabilmek için unity içerisinde modelleme yapabilme imkanı sunan ProBuilder kullanılmıştır.
 - UI Animation
