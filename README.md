@@ -6,7 +6,7 @@ Popüler bir hypercasual oyun olan Jelly Shift'in klonudur. Mobil input sistemi 
 - Basit engelleri oluşturabilmek için unity içerisinde modelleme yapabilme imkanı sunan ProBuilder kullanılmıştır.
 - UI Animation
 - Singleton GameManager , birden çok sınıftan erişim ve bu sınıftan tek bir nesne oluşturulması amaçlandığı için Singleton kullanılmıştır.
-- Progress Bar.
+- İlerlemenin kontrolü için, progress bar.
 
 #### Gameplay
 
