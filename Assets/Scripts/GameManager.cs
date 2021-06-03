@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Text finishedText;
     public GameObject Timeline; 
     
+    private float startDelay = 0.15f;
    
     private void Awake()
     {
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator StartGameCoroutine()
     {
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(startDelay);
         isAktif = true;
         tapToStartButton.gameObject.SetActive(false);
         progressSlider.gameObject.SetActive(true);
@@ -61,11 +62,11 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator CompletedTheChaper()
     {
-        finishedText.gameObject.SetActive(true);
+        //finishedText.gameObject.SetActive(true);
         progressSlider.gameObject.SetActive(false);
         isAktif = false ;
-       // Timeline.gameObject.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        Timeline.gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
         RestartLevel();
         
 

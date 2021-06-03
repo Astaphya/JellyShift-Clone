@@ -42,6 +42,7 @@ public class CubeController : MonoBehaviour
     {
       yScale = transform.localScale.y;
       xScale = transform.localScale.x;
+
         
     }
     private void Update()
@@ -91,15 +92,13 @@ public class CubeController : MonoBehaviour
 
         
         
-       // scaleFactor = yDist/ swipeDuration;
-
-        //Debug.Log("Scale Factor: "+scaleFactor.ToString());
+       
 
 
 
-       // Debug.Log("y :" + y.ToString());
+
         
-        /*
+        /* x eksenindeki fark ile y eksenindeki fark 0'a eşit ise ekrana iki kez aynı noktadan dokunulmuştur.
         if(Mathf.Abs(x) == 0 && Mathf.Abs(y) == 0)
         {
           direction = "Tapped";
@@ -134,7 +133,7 @@ public class CubeController : MonoBehaviour
            
           }
         }
-         //directionText.text = direction;
+         
       }
     }
    
@@ -145,14 +144,9 @@ public class CubeController : MonoBehaviour
 
     public void NormalizeVelocity()
     {
-      /*
-        yScale = Mathf.PingPong(Time.time ,maxScaleBoundary - minScalBoundary) + yScale;
-        transform.localScale = new Vector3(xScale,yScale,transform.localScale.z);
-      */
-
-      // deger = deger(i) - minDeger / maxDeger - minDeger max= 10k min = 50
+     
       //Normalization
-
+      // deger = deger(i) - minDeger / maxDeger - minDeger 
       // Swipe değerlerini normalize ediyoruz.
       normalizedVelocity = (swipeVelocity - minSwipeVelocity) / (maxSwipeVelocity - minSwipeVelocity) * 2   ;
       
@@ -176,11 +170,7 @@ public class CubeController : MonoBehaviour
         {
           yScale +=  scaleFactor  * normalizedVelocity ;
           xScale -=  scaleFactor  * normalizedVelocity ;
-          //scaleRate +=0.1f;
-          // yScale =  Mathf.Lerp(transform.localScale.y,yScale,Time.deltaTime);
-          // xScale = Mathf.Lerp(transform.localScale.x,xScale,Time.deltaTime);
-          
-          
+               
           if(yScale >= 1.7f)
           { 
             yScale = 1.8f;
@@ -190,7 +180,7 @@ public class CubeController : MonoBehaviour
 
           transform.localScale = Vector3.Lerp (transform.localScale, newScale, scaleSpeed * Time.deltaTime); // Scale değeri üzerinde Lerp fonksiyonu ile düzgün,yumuşak bir geçiş sağlıyoruz.
           
-         // transform.localScale = new Vector3(xScale,yScale,transform.localScale.z);
+         
         } 
            
       }
@@ -203,9 +193,6 @@ public class CubeController : MonoBehaviour
               yScale -=  scaleFactor * normalizedVelocity ;
               xScale +=  scaleFactor * normalizedVelocity ;
              
-           // xScale +=scaleRate;
-          //yScale =  Mathf.Lerp(transform.localScale.y,yScale,Time.deltaTime);
-          //xScale = Mathf.Lerp(transform.localScale.x,xScale,Time.deltaTime);
           
           if(xScale >= 1.7f)
           {
@@ -216,7 +203,6 @@ public class CubeController : MonoBehaviour
            Vector3 newScale = new Vector3(xScale,yScale,transform.localScale.z);
 
           transform.localScale = Vector3.Lerp (transform.localScale, newScale, scaleSpeed * Time.deltaTime);
-          //transform.localScale = new Vector3(xScale,yScale,transform.localScale.z);
             
           }
           
